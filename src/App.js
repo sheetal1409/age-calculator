@@ -37,6 +37,7 @@ function App() {
     setDays(d2 - d1);
     setMonths(m2 - m1);
     setAge(y2 - y1);
+
   }
   return (
     <div className="App">
@@ -59,9 +60,9 @@ function App() {
         </form>
       </section>
       <section className='age-display'>
-        <h1><span>{age}</span> years</h1>
-        <h1><span>{months}</span> months</h1>
-        <h1><span>{days}</span> days</h1>
+        <h1><span>{age ? age : "__"}</span> years</h1>
+        <h1><span>{months ? months : "__"}</span> months</h1>
+        <h1><span>{days ? days : "__"}</span> days</h1>
       </section>
     </div>
   );
