@@ -1,13 +1,165 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
+  background-color: hsl(0, 0%, 86%);
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  width: 60vw;
+  height: 70vh;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  border-bottom-right-radius: 150px;
+  padding: 1rem;
+}
+
+.user-entry {
+  width: 100%;
+  height: 20vh;
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.input-group {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.date-input {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: gray
+}
+
+.date-input {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+
+.date-input>input {
+  padding: 0.5em;
+  width: 12vw;
+  height: 8vh;
+  /* text-align: center; */
+  border-radius: 5px;
+  outline-offset: 0px;
+  border: 1px solid hsl(0, 0%, 86%);
+  color: black;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+.date-input>input:focus {
+  outline: none;
+}
+
+
+.date-input>input:active,
+.date-input>input:hover,
+.date-input>input:focus {
+  border: 1px solid hsl(259, 100%, 65%);
+}
+
+.date-input>input:invalid {
+  border: none;
+  outline: 1px solid red;
+}
+
+.submission {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.line {
+  width: 80%;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+}
+
+button {
+  width: 8vw;
+  height: 15vh;
+  border-radius: 50%;
+  background-image: url('//images/icon-arrow.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: hsl(259, 100%, 65%);
+}
+
+/* image {
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+} */
+
+.age-display {
+  width: 80%;
+  padding: 1em;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.age-display>h1 {
+  text-align: left;
+  margin: 0;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-style: italic;
+  padding: 0;
+}
+
+span {
+  margin: 0;
+  font-size: 55px;
+  color: hsl(259, 100%, 65%);
+}
+
+@media (max-width:600px) {
+  .date-input {
+    font-size: 0.5em;
+  }
+
+  button {
+    width: 12vw;
+    height: 10vh;
+    border-radius: 50%;
+  }
+
+  .age-display>h1 {
+    font-size: 1em;
+  }
+
+  span {
+    font-size: 1.1em;
+  }
 }
